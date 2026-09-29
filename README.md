@@ -181,9 +181,11 @@ Settings and logs are stored in `%LOCALAPPDATA%\LayoutDock\`:
 
 The controller requests layout changes from the focused window and confirms them against its actual HKL. Changes made through Windows update the same history. Layouts refresh every three seconds and after relevant Windows notifications. A separate UI Automation thread measures taskbar contents without blocking keyboard input.
 
-The `wndinject/` directory contains the original injection and rendering reference, not a dependency of the application build.
-
 The application icon and its editable SVG source are in [`assets/`](assets/README.md). The icon is embedded during the normal build; no image tooling is required.
+
+## Screenshots
+![alt text](image.png)
+![alt text](image-1.png)
 
 ## Known limitations
 
