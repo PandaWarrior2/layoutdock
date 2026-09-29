@@ -1,0 +1,38 @@
+#include <windows.h>
+#include "resource_ids.h"
+#include "app_info.h"
+#include "settings.rc"
+
+IDI_LAYOUTDOCK ICON "../assets/layoutdock.ico"
+
+1 VERSIONINFO
+FILEVERSION LAYOUTDOCK_VERSION_NUMBER
+PRODUCTVERSION LAYOUTDOCK_VERSION_NUMBER
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS 0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE 0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", LAYOUTDOCK_AUTHOR
+            VALUE "FileDescription", "LayoutDock keyboard layout switcher"
+            VALUE "FileVersion", LAYOUTDOCK_VERSION
+            VALUE "InternalName", "LayoutDock"
+            VALUE "OriginalFilename", "LayoutDock.exe"
+            VALUE "ProductName", "LayoutDock"
+            VALUE "ProductVersion", LAYOUTDOCK_VERSION
+            VALUE "Comments", LAYOUTDOCK_REPOSITORY
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
+
+// Embed the same DPI and common-controls manifest with either compiler.
+1 RT_MANIFEST "app.manifest"
